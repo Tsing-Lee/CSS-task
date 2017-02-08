@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html{
+            font-size:62.5%;
+            font-family: Microsoft YaHei, serif;
+        }
+        body{
+            background:rgb(239,240,244);
+            min-width: 320px;
+        }
+        input{
+            width:85%;
+            border:none;
+            border-left: 1px solid rgb(234, 237, 238);
+            font-size:3.2rem;
+            text-indent: 5rem;
+            vertical-align: middle;
+            font-family:Microsoft YaHei, serif;
+        }
+        img{
+            max-width: 100%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        label{
+            display:inline-block;
+            width:5%;
+            padding:0 2%;
+            text-align: center;
+            vertical-align: middle;
+        }
+        button{
+            border: none;
+            font-size:3.6rem;
+            padding:2rem;
+            font-family: Microsoft YaHei, serif;
+            color: white;
+            background:rgb(95,192,205);
+            width:100%;
+        }
+        h2 {
+            padding: 1rem;
+            font-size: 3.6rem;
+            font-weight: normal;
+            letter-spacing: 1.5rem;
+        }
+        .wrap {
+            width: 100%;
+            background: #eff0f4;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+            background: #5ac0ce;
+
+        }
+        .header-left {
+            position: absolute;
+            top: 20%;
+            left: 2rem;
+            font-size: 3.2rem;
+            color: #fff;
+        }
+        .header-right {
+            position: absolute;
+            top: 20%;
+            right: 2rem;
+            font-size: 3.2rem;
+            color: #fff;
+        }
+        .login{
+            padding-bottom: 10%;
+        }
+        .login-username{
+            width:100%;
+            margin-top:2%;
+            padding: 3.5% 0;
+            background-color: white;
+        }
+        .footer{
+            width:95%;
+            color:rgb(95,192,205);
+            font-size:3.2rem;
+            text-align: right;
+        }
+    </style >
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <span class="header-left">关闭</span>
+        <h2>登录</h2>
+        <span class="header-right" >注册</span>
+        </div>
+   <form >
+       <ul class="login">
+           <li class="login-username">
+               <label for="username"><img src="images/iphone.png"></label>
+                <input type="text" id="username" placeholder="请输入手机号" >
+           </li>
+           <li class="login-username">
+               <label for="password"><img src="images/locked.png"></label>
+               <input type="text" id="password" placeholder="请输入密码" >
+           </li>
+       </ul>
+   </form>
+    <button type="submit"><span style="width:100%;">登 录</span></button>
+    <div class="footer">忘记密码？</div>
+</div>
+</body>
+</html>
