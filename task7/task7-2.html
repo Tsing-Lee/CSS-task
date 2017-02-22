@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#audio_btn").click(function(){
+        var music = document.getElementById("music");
+        if(music.paused){
+            music.play();
+            $("#music_btn").attr("src","images/play.png");
+        }else{
+            music.pause();
+            $("#music_btn").attr("src","images/play.png");
+        }
+    });
+
+    function playPause() {
+        var music = document.getElementById('music2');
+        var music_btn = document.getElementById('music_btn2');
+        if (music.paused){
+            music.play();
+            music_btn.src = 'images/play.png';
+        }
+        else{
+            music.pause();
+            music_btn.src = 'images/play.png';
+        }
+    }
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>task7</title>
+    <style>
+        html{
+            font-size:625%;
+        }
+        body{
+            background-color:rgb(41,189,224);
+            padding-top:0.73rem;
+        }
+        a{
+            text-decoration: none !important;
+        }
+        .button-bottom{
+            width:70%;
+        }
+        .navbar-default{
+            padding-top:0.2rem;
+            padding-bottom:0.1rem;
+            border:none;
+        }
+        .head-center{
+            display:inline-block;
+            width:80%;
+            text-align:center;
+        }
+        .header-img{
+            width:10%;
+        }
+        .div-align{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .round{
+            background-color:rgb(251,180,53);
+            width:0.5rem;
+            height:0.5rem;
+            border-radius:0.25rem;
+        }
+        .triangle-right{
+            width:0;
+            height:0;
+            border-left:0.25rem solid white;
+            border-top: 0.15rem solid transparent;
+            border-bottom: 0.15rem solid transparent;
+        }
+        .triangle-down{
+            width:0;
+            height:0;
+            border-top:0.1rem solid rgb(185,233,245);
+            border-left: 0.05rem solid transparent;
+            border-right:0.05rem solid transparent;
+            position:absolute;
+            top:1.43rem;
+            left:0.5rem;
+        }
+        .square{
+            margin:0 3% 10% 3%;
+            border:3px solid white;
+            width:26%;
+            position:relative;
+            float:left;
+        }
+        .square-top{
+            padding:20% 15%;
+            background-color:rgb(245,201,123);
+            font-size:0.15rem;
+            text-align:center;
+        }
+        .square-bottom{
+            padding:0 18%;
+            background-color:rgb(131,176,154);
+            color:white;
+            text-align:center;
+        }
+        .body-margin{
+            margin-bottom:1.2rem;
+        }
+        .option{
+            width:100%;
+            position:absolute;
+            top:115%;
+            opacity: 0;
+            transition: 0.3s;
+            display:flex;
+            justify-content:space-around;
+        }
+        .option1{
+            background:url(images/background.png) no-repeat;
+            width:0.15rem;
+            height:0.15rem;
+            background-position:0 0;
+            background-size:1rem; 1rem;
+        }
+        .option2{
+            background:url(images/background.png) no-repeat;
+            width:0.15rem;
+            height:0.15rem;
+            background-position:0 -15px;
+            background-size:1rem 1rem;
+        }
+        .option3{
+            background:url(images/background.png) no-repeat;
+            width:0.15rem;
+            height:0.15rem;
+            background-position:-15px 0;
+            background-size:1rem 1rem;
+        }
+        .option4{
+            background:url(images/background.png) no-repeat;
+            width:0.15rem;
+            height:0.15rem;
+            background-position:-15px -15px;
+            background-size:1rem 1rem;
+        }
+        .square:hover .option{
+            opacity: 1;
+        }
+        .background-blue{
+            background-color:rgb(41,189,224);
+        }
+        .background-lightblue{
+            background-color:rgb(185,233,245);
+        }
+        .background-orange{
+            background-color:rgb(251,180,53);
+        }
+        .font-white{
+            color:white;
+        }
+        .font-size-30px{
+            font-size:0.25rem;
+        }
+        .font-size-25px{
+            font-size:0.17rem;
+        }
+        .font-size-20px{
+            font-size:0.15rem;
+        }
+        .padding-20px{
+            padding:0.1rem;
+            line-height:0.5rem;
+        }
+        .padding-left-50px{
+            padding-left:0.5rem;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default container-fluid navbar-fixed-top background-blue ">
+    <span class="pull-left header-img "><img class="center-block" src="images/menu.png"></span>
+    <span class=" font-white font-size-30px head-center">投票</span>
+    <span class="pull-right header-img"><img class="center-block" src="images/close.png"></span>
+</nav>
+<div class="container-fluid background-lightblue font-size-25px padding-20px">
+    发言讨论结束，请大家投票
+    <span >
+        <audio id="music2" src="audio/财富自由.mp3" loop="loop">你的浏览器不支持audio标签。</audio>
+        <a href="javascript:playPause();">
+            <span class="pull-right" id="music_btn2">
+            <div class="round div-align">
+                <div class="triangle-right"></div>
+            </div>
+            </span>
+        </a>
+    </span>
+</div>
+<div class="font-white font-size-20px padding-20px padding-left-50px">
+    点击的票数最多的人的头像
+    <span class="triangle-down position-triangle"></span>
+</div>
+    <div class="square">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">1号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">2号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">警察</div>
+    <div class="square-bottom">3号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">法官</div>
+    <div class="square-bottom">4号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">狙击手</div>
+    <div class="square-bottom">5号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">医生</div>
+    <div class="square-bottom">6号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">杀手</div>
+    <div class="square-bottom">7号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">8号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">9号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square body-margin">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">10号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square body-margin">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">11号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+    <div class="square body-margin">
+    <div class="square-top">水民</div>
+    <div class="square-bottom">12号</div>
+        <div class="option">
+            <div class="option1"></div>
+            <div class="option2"></div>
+            <div class="option3"></div>
+            <div class="option4"></div>
+        </div>
+    </div>
+<nav class="navbar container-fluid navbar-fixed-bottom background-blue padding-20px div-align">
+    <a href="task7-3.html" class=" font-white background-orange button-bottom text-center">投死</a>
+</nav>
+</body>
+</html>
