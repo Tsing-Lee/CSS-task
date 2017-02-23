@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>task8</title>
+    <style>
+        html{
+            font-size:625%;
+        }
+        img{
+            max-width:100%;
+        }
+        a:hover{
+            border-bottom:1px solid white;
+        }
+        a{
+            color:inherit!important;
+        }
+        .row{
+            position:relative;
+        }
+        .row-padding{
+            padding-top:0.5rem;
+            padding-left:0.4rem;
+            padding-right:0.4rem;
+        }
+        .student{
+            padding-top:0.2rem;
+            background-color:white;
+            box-shadow:0 0.02rem 5px grey;
+            border-radius:5px;
+        }
+        .row-main-padding{
+            padding:0.5rem 0;
+        }
+        .navbar{
+            margin-bottom:0;
+            border:none;
+        }
+        .navbar-nav
+        {
+            padding:0.3rem 0.5rem;
+        }
+        .header-li{
+            margin-left:0.8rem;
+        }
+        .font-green{
+            color:#29b078;
+        }
+        .font-white{
+            color:white;
+        }
+        .font-size-15px{
+            font-size:0.15rem;
+        }
+        .font-size-18px{
+            font-size:0.18rem;
+        }
+        .background-green{
+            background-color:#29b078;
+        }
+        .info-border{
+            border-left: 1px dashed #999;
+        }
+        .nav-padding{
+            padding:0 0.5rem;
+        }
+        .img-size{
+            height:0.7rem;
+            vertical-align:middle;
+        }
+        .square{
+            width:0.5rem;
+            height:0.5rem;
+            border-radius:0.25rem;
+            line-height:0.5rem;
+            text-align:center;
+            box-shadow:0 0.02rem 5px gray;
+            color: #29b078;
+        }
+        .square2{
+            width:1.1rem;
+            height:1.1rem;
+            border-radius:0.55rem;
+            margin:0.3rem auto;
+        }
+        .photo1{
+            background:url(images/photo1.png) no-repeat ;
+        }
+        .photo2{
+            background:url(images/photo2.png) no-repeat -20px -10px;
+        }
+        .photo3{
+            background:url(images/photo3.png) no-repeat -20px -20px;
+        }
+        .photo4{
+            background:url(images/photo4.png) no-repeat -20px 0;
+        }
+        .student-text{
+            padding:0.15rem 0.5rem;
+        }
+        .student-header-padding{
+            padding:0.5rem 0;
+        }
+        .cooperate{
+            width:2.2rem;
+            height:1.7rem;
+        }
+        .company1{
+            background:url(images/alibaba.png) no-repeat -20px -10px;
+        }
+        .company2{
+            background:url(images/ksyun.png) no-repeat -5px 10px;
+        }
+        .company3{
+            background:url(images/rl.png) no-repeat -10px -15px;
+        }
+        .company4{
+            background:url(images/ytx.png) no-repeat 50% 40px;
+        }
+        .company5{
+            background:url(images/qiniu.png) no-repeat 50% 40px;
+        }
+        .border-left{
+            border-left:2px solid white;
+        }
+        .footer-padding-left{
+            padding:0 0.1rem;
+        }
+        .footer-padding-right{
+            padding:0 0.2rem;
+        }
+        .footer-border{
+            border-top:1px solid #32c086;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-defult">
+    <div class="container-fluid nav-padding">
+        <p class="navbar-text font-green">客服热线：010-594-78634</p>
+            <a class="navbar-brand navbar-right" href="#">
+                <img alt="Brand" src="images/header-weibo.png">
+            </a>
+            <a class="navbar-brand navbar-right" href="#">
+                <img alt="Brand" src="images/header-qq.png">
+            </a>
+            <a class="navbar-brand navbar-right" href="#">
+                <img alt="Brand" src="images/header-wechat.png">
+            </a>
+        </div>
+        <div class="container-fluid background-green font-size-15px">
+            <ul class="nav navbar-nav navbar-right font-white">
+                <li class="header-li"><a>首页</a></li>
+                <li class="header-li"><a>职业</a></li>
+                <li class="header-li"><a>推荐</a></li>
+                <li class="header-li"><a>关于</a></li>
+            </ul>
+        </div>
+</nav>
+<div><img src="images/background.png"></div>
+<div class="container-fluid">
+    <div class="row row-padding">
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-4"><p class="img-size"><img class="center-block" src="images/rocket.png"></p></div>
+                <div class="col-lg-4"><p class="img-size"><img class="center-block" src="images/book.png"></p></div>
+                <div class="col-lg-4"><p class="img-size"><img class="center-block" src="images/person.png"></p></div>
+                <div class="col-lg-4"><p class="text-center">高效</p></div>
+                <div class="col-lg-4"><p class="text-center">规范</p></div>
+                <div class="col-lg-4"><p class="text-center">人脉</p></div>
+                <div class="col-lg-4"><p class="text-center">将五到七年的成长时间，缩短到一年到三年。</p></div>
+                <div class="col-lg-4"><p class="text-center">标准的实战教程，不会走弯路</p></div>
+                <div class="col-lg-4"><p class="text-center">同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</p></div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-lg-offset-1 info-border">
+            <p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>累计在线学习人数</p>
+            <p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>学员已经找到满意工作</p>
+        </div>
+    </div>
+    <div class="row row-padding">
+        <div class="col-lg-12 text-center font-size-18px"><strong>如何学习</strong></div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+            <div class="col-lg-3"><div class="square">1</div></div>
+            <div class="col-lg-7 ">匹配你现在的个人情况寻找适合自己的岗位</div>
+                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">2</div></div>
+                <div class="col-lg-7">了解职业前景薪金待遇、竞争压力等</div>
+                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">3</div></div>
+                <div class="col-lg-7">掌握行业内顶级技能</div>
+                <div class="col-lg-2"><img src="images/arrow.png"></div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">4</div></div>
+                <div class="col-lg-6">查看职业目标任务</div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">5</div></div>
+                <div class="col-lg-7">参考学习资源，掌握技能点，逐个完成任务</div>
+                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">6</div></div>
+                <div class="col-lg-7">加入班级，和小伙伴们互帮互助，一块学习</div>
+                <div class="col-lg-2"><img src="images/arrow.png"></div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">7</div></div>
+                <div class="col-lg-7 ">选择导师，一路引导，加速自己成长</div>
+                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="row row-main-padding">
+                <div class="col-lg-3"><div class="square">8</div></div>
+                <div class="col-lg-6 ">完成职业技能，升级业界大牛</div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-padding">
+        <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>优秀学员展示</strong></div>
+        <div class="col-lg-3">
+            <div class="student ">
+                <div class="square2 photo1"></div>
+                <p class="text-center student-text"><strong>技术顾问:汪汪佳</strong></p>
+                <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="student ">
+                <div class="square2 photo2 "></div>
+                <p class="text-center student-text"><strong>技术顾问:狗佳</strong></p>
+                <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="student ">
+                <div class="square2 photo3"></div>
+                <p class="text-center student-text"><strong>技术顾问:狗叼</strong></p>
+                <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="student ">
+                <div class="square2 photo4"></div>
+                <p class="text-center student-text"><strong>技术顾问:智障儿子</strong></p>
+                <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
+            </div>
+        </div>
+    </div>
+        <div class="row row-padding">
+            <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>战略合作企业</strong></div>
+            <div class="col-lg-2 col-lg-offset-1">
+                <div class="cooperate company1"></div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cooperate company2"></div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cooperate company3"></div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cooperate company4"></div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cooperate company5"></div>
+            </div>
+        </div>
+</div>
+<nav class="navbar navber-defult">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>友情链接</strong></div>
+        <ul class="navbar-nav col-lg-12">
+            <li class="col-lg-1 col-lg-offset-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>教师招聘</a></li>
+            <li class="col-lg-1"><a>找工作</a></li>
+            <li class="col-lg-1"><a>教师招聘</a></li>
+            <li class="col-lg-1"><a>找工作</a></li>
+            <li class="col-lg-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>教师招聘</a></li>
+            <li class="col-lg-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>找工作</a></li>
+            <li class="col-lg-1 col-lg-offset-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>教师招聘</a></li>
+            <li class="col-lg-1"><a>找工作</a></li>
+            <li class="col-lg-1"><a>教师招聘</a></li>
+            <li class="col-lg-1"><a>找工作</a></li>
+            <li class="col-lg-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>教师招聘</a></li>
+            <li class="col-lg-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>手机软件</a></li>
+            <li class="col-lg-1"><a>找工作</a></li>
+        </ul>
+        </div>
+        <div class="row row-padding background-green font-white">
+            <div class="col-lg-3">
+                <p class="footer-padding-left">技能树 — 改变你我 </p><br>
+                <p><span class="footer-padding-left">关于我们</span>
+                    <span class="footer-padding-left border-left">联系我们</span>
+                    <span class="footer-padding-left border-left">合作企业</span></p>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 ">
+                <p class="footer-padding-right">旗下网站</p>
+                <p>
+                    <span class="footer-padding-right"><a>草船云孵化器</a></span>
+                    <span class="footer-padding-right"><a>最强IT特训营</a></span><br>
+                    <span class="footer-padding-right"><a>葡萄藤轻游戏</a></span>
+                    <span class="footer-padding-right"><a>桌游精灵</a></span></p>
+            </div>
+            <div class="col-lg-3 col-lg-offset-2">
+                <p>微信公众平台</p>
+                <p><img src="images/qrcode.png"></p>
+            </div>
+            <div class="col-lg-12 text-center footer-border">Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP</div>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
