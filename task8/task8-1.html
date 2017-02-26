@@ -13,19 +13,22 @@
         img{
             max-width:100%;
         }
-        a:hover{
+        body{
+            background-color:#fafafa;
+        }
+        .nav a:hover{
+            background-color:transparent !important;
             border-bottom:1px solid white;
         }
         a{
             color:inherit!important;
+            text-decoration:none;
         }
         .row{
             position:relative;
         }
         .row-padding{
-            padding-top:0.5rem;
-            padding-left:0.4rem;
-            padding-right:0.4rem;
+            padding:0.25rem 0.4rem;
         }
         .student{
             padding-top:0.2rem;
@@ -40,12 +43,13 @@
             margin-bottom:0;
             border:none;
         }
-        .navbar-nav
-        {
-            padding:0.3rem 0.5rem;
-        }
+
         .header-li{
-            margin-left:0.8rem;
+            margin-right:0.5rem;
+        }
+        .header-a{
+            padding:0.5rem 0.5rem;
+            border-bottom:1px solid #29b078;
         }
         .font-green{
             color:#29b078;
@@ -62,7 +66,11 @@
         .background-green{
             background-color:#29b078;
         }
+        .background-white{
+            background-color:white;
+        }
         .info-border{
+            padding-top:0.33rem;
             border-left: 1px dashed #999;
         }
         .nav-padding{
@@ -80,6 +88,7 @@
             text-align:center;
             box-shadow:0 0.02rem 5px gray;
             color: #29b078;
+            background-color:white;
         }
         .square2{
             width:1.1rem;
@@ -103,11 +112,12 @@
             padding:0.15rem 0.5rem;
         }
         .student-header-padding{
-            padding:0.5rem 0;
+            padding-bottom:0.4rem;
         }
         .cooperate{
             width:2.2rem;
             height:1.7rem;
+            background-color: white !important;
         }
         .company1{
             background:url(images/alibaba.png) no-repeat -20px -10px;
@@ -136,11 +146,32 @@
         .footer-border{
             border-top:1px solid #32c086;
         }
+        .carousel-control{
+            background-image:none !important;
+            text-shadow: none!important;
+            line-height:4.5rem;
+            font-size:0.6rem;
+            color:white !important;
+
+        }
+        .carousel-inner p{
+            font-size:0.35rem;
+            position:absolute;
+            color:white;
+            top:1.5rem;
+            left:2rem;
+        }
+        .font-size-45px{
+            font-size:0.45rem;
+        }
+        .font-size-60px{
+            font-size:0.6rem;
+        }
     </style>
 </head>
 <body>
 <nav class="navbar navbar-defult">
-    <div class="container-fluid nav-padding">
+    <div class="container-fluid nav-padding background-white">
         <p class="navbar-text font-green">客服热线：010-594-78634</p>
             <a class="navbar-brand navbar-right" href="#">
                 <img alt="Brand" src="images/header-weibo.png">
@@ -154,14 +185,47 @@
         </div>
         <div class="container-fluid background-green font-size-15px">
             <ul class="nav navbar-nav navbar-right font-white">
-                <li class="header-li"><a>首页</a></li>
-                <li class="header-li"><a>职业</a></li>
-                <li class="header-li"><a>推荐</a></li>
-                <li class="header-li"><a>关于</a></li>
+                <li class="header-li"><a class="header-a">首页</a></li>
+                <li class="header-li"><a class="header-a">职业</a></li>
+                <li class="header-li"><a class="header-a">推荐</a></li>
+                <li class="header-li"><a class="header-a">关于</a></li>
             </ul>
         </div>
 </nav>
-<div><img src="images/background.png"></div>
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;作为你一个初级菜鸟，你是否想要了解
+                <br><span class="font-size-45px"><span class="font-size-60px"> &emsp; &emsp;50万</span>年薪的程序员,都会哪些技能呢？</span>
+            </p>
+            <img src="images/background.png" alt="First slide">
+        </div>
+        <div class="item">
+            <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;作为你一个中级菜鸟，你是否想要了解
+                <br><span class="font-size-45px"><span class="font-size-60px"> &emsp; &emsp;200万</span>年薪的程序员,都会哪些技能呢？</span>
+            </p>
+            <img src="images/background.png" alt="Second slide">
+        </div>
+        <div class="item">
+            <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;作为你一个高级菜鸟，你是否想要了解
+                <br><span class="font-size-45px"> &emsp; &emsp;能找到<span class="font-size-60px">女朋友</span>的程序员,都会哪些技能呢？</span>
+            </p>
+            <img src="images/background.png" alt="Second slide">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel"
+       data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel"
+       data-slide="next">&rsaquo;</a>
+</div>
 <div class="container-fluid">
     <div class="row row-padding">
         <div class="col-lg-9">
@@ -187,55 +251,55 @@
         <div class="col-lg-3">
             <div class="row row-main-padding">
             <div class="col-lg-3"><div class="square">1</div></div>
-            <div class="col-lg-7 ">匹配你现在的个人情况寻找适合自己的岗位</div>
-                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+            <div class="col-lg-7 " style="padding-top:0.07rem;">匹配你现在的个人情况寻找适合自己的岗位</div>
+                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">2</div></div>
-                <div class="col-lg-7">了解职业前景薪金待遇、竞争压力等</div>
-                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+                <div class="col-lg-7" style="padding-top:0.07rem;">了解职业前景薪金待遇、竞争压力等</div>
+                <div class="col-lg-2 " style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">3</div></div>
-                <div class="col-lg-7">掌握行业内顶级技能</div>
-                <div class="col-lg-2"><img src="images/arrow.png"></div>
+                <div class="col-lg-7" style="padding-top:0.16rem;">掌握行业内顶级技能</div>
+                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">4</div></div>
-                <div class="col-lg-6">查看职业目标任务</div>
+                <div class="col-lg-6" style="padding-top:0.16rem;">查看职业目标任务</div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">5</div></div>
-                <div class="col-lg-7">参考学习资源，掌握技能点，逐个完成任务</div>
-                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+                <div class="col-lg-7" style="padding-top:0.07rem;">参考学习资源，掌握技能点，逐个完成任务</div>
+                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">6</div></div>
-                <div class="col-lg-7">加入班级，和小伙伴们互帮互助，一块学习</div>
-                <div class="col-lg-2"><img src="images/arrow.png"></div>
+                <div class="col-lg-7" style="padding-top:0.07rem;">加入班级，和小伙伴们互帮互助，一块学习</div>
+                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">7</div></div>
-                <div class="col-lg-7 ">选择导师，一路引导，加速自己成长</div>
-                <div class="col-lg-2 "><img src="images/arrow.png"></div>
+                <div class="col-lg-7 " style="padding-top:0.07rem;">选择导师，一路引导，加速自己成长</div>
+                <div class="col-lg-2 " style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="row row-main-padding">
                 <div class="col-lg-3"><div class="square">8</div></div>
-                <div class="col-lg-6 ">完成职业技能，升级业界大牛</div>
+                <div class="col-lg-6 " style="padding-top:0.07rem;">完成职业技能，升级业界大牛</div>
             </div>
         </div>
     </div>
@@ -290,9 +354,9 @@
         </div>
 </div>
 <nav class="navbar navber-defult">
-    <div class="container-fluid">
+    <div class="container-fluid background-white">
+        <p class="text-center"><strong>友情链接</strong></p>
         <div class="row">
-        <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>友情链接</strong></div>
         <ul class="navbar-nav col-lg-12">
             <li class="col-lg-1 col-lg-offset-1"><a>手机软件</a></li>
             <li class="col-lg-1"><a>教师招聘</a></li>

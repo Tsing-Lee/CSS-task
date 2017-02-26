@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>task8</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        html{
+            font-size:625%;
+        }
+        body{
+            background-color:#fafafa;
+        }
+        a{
+            color:inherit!important;
+            text-decoration:none !important;
+        }
+
+        .nav a:hover{
+            background-color:transparent !important;
+            border-bottom:1px solid white;
+        }
+        .breadcrumb{
+            margin:0 !important;
+            padding:0.2rem 0.3rem;
+            background-color:#fafafa;
+            border-bottom:1px solid #d0d6d9;
+        }
+        .breadcrumb>li+li:before{
+            color:black;
+            content:">";
+        }
+        .breadcrumb>.active {
+            color: #29b078;
+        }
+        .row{
+            position:relative;
+        }
+        .row-padding{
+            padding:0.25rem 0.4rem;
+        }
+        .navbar{
+            margin-bottom:0;
+            border:none;
+        }
+        .header-li{
+            margin-right:0.5rem;
+        }
+        .header-a{
+            padding:0.5rem 0.5rem;
+            border-bottom:1px solid #29b078;
+        }
+        .font-green{
+            color:#29b078 !important;
+        }
+        .font-white{
+            color:white;
+        }
+        .font-gray{
+            color:#999999;
+        }
+        .font-size-15px{
+            font-size:0.15rem;
+        }
+        .background-green{
+            background-color:#29b078;
+        }
+        .background-white{
+            background-color:white !important;
+        }
+        .nav-padding{
+            padding:0 0.5rem;
+        }
+        .border-left{
+            border-left:2px solid white;
+        }
+        .footer-padding-left{
+            padding:0 0.1rem;
+        }
+        .footer-padding-right{
+            padding:0 0.2rem;
+        }
+        .footer-border{
+            border-top:1px solid #32c086;
+        }
+        .carousel-inner p{
+            font-size:0.35rem;
+            position:absolute;
+            color:white;
+            top:1.5rem;
+            left:2rem;
+        }
+        .main{
+            padding:0 10%;
+        }
+        .nav-direction{
+            padding :0.2rem 0;
+            border-bottom:1px solid #edf1f2;
+        }
+        .nav-direction-text{
+            margin:0 0.15rem;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-defult">
+    <div class="container-fluid nav-padding background-white">
+        <p class="navbar-text font-green">客服热线：010-594-78634</p>
+        <a class="navbar-brand navbar-right" href="#">
+            <img alt="Brand" src="images/header-weibo.png">
+        </a>
+        <a class="navbar-brand navbar-right" href="#">
+            <img alt="Brand" src="images/header-qq.png">
+        </a>
+        <a class="navbar-brand navbar-right" href="#">
+            <img alt="Brand" src="images/header-wechat.png">
+        </a>
+    </div>
+    <div class="container-fluid background-green font-size-15px">
+        <ul class="nav navbar-nav navbar-right font-white">
+            <li class="header-li"><a class="header-a">首页</a></li>
+            <li class="header-li"><a class="header-a">职业</a></li>
+            <li class="header-li"><a class="header-a">推荐</a></li>
+            <li class="header-li"><a class="header-a">关于</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="main">
+    <ol class="breadcrumb">
+        <li><a href="#">首页</a></li>
+        <li class="active">职业</li>
+    </ol>
+    <div class="nav-direction">
+        <span class="font-gray">方向：</span>
+        <span class="nav-direction-text">前端开发</span>
+        <span class="nav-direction-text">后端开发</span>
+        <span class="nav-direction-text">移动开发</span>
+        <span class="nav-direction-text">整站开发</span>
+        <span class="nav-direction-text">运营维护</span>
+    </div>
+    <div>
+        <p>前端开发方向</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">前端工程师</h4>
+                                    Web前端开发工程师，主要职责是利用(X)HTMl / CSS / JavaScript / flash等各种Web技术进行产品的开发。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td>门槛</td>
+                                        <td>难易程度</td>
+                                    </tr>
+                                    <tr>
+                                        <td>门槛</td>
+                                        <td>难易程度</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">123</td>
+                                        <td>456</td>
+                                    </tr>
+                                    <tr><td>456</td></tr>
+                                    <tr><td>456</td></tr>
+                                </table>
+                                <table class="table table-bordered">
+                                    <tr><td>有286人正在学</td></tr>
+                                    <tr><td>提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navber-defult">
+    <div class="container-fluid background-white">
+        <div class="row row-padding background-green font-white">
+            <div class="col-lg-4">
+                <p class="footer-padding-left">技能树 — 改变你我 </p><br>
+                <p><span class="footer-padding-left">关于我们</span>
+                    <span class="footer-padding-left border-left">联系我们</span>
+                    <span class="footer-padding-left border-left">合作企业</span></p>
+            </div>
+            <div class="col-lg-4 ">
+                <p class="footer-padding-right">旗下网站</p>
+                <p>
+                    <span class="footer-padding-right"><a>草船云孵化器</a></span>
+                    <span class="footer-padding-right"><a>最强IT特训营</a></span><br>
+                    <span class="footer-padding-right"><a>葡萄藤轻游戏</a></span>
+                    <span class="footer-padding-right"><a>桌游精灵</a></span></p>
+            </div>
+            <div class="col-lg-4">
+                <p>微信公众平台</p>
+                <p><img src="images/qrcode.png"></p>
+            </div>
+            <div class="col-lg-12 text-center footer-border">Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP</div>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
