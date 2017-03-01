@@ -10,19 +10,59 @@
         html{
             font-size:625%;
         }
-        img{
-            max-width:100%;
-        }
         body{
             background-color:#fafafa;
+            font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
         }
         .nav a:hover{
             background-color:transparent !important;
-            border-bottom:1px solid white;
+            border-bottom:4px solid white;
         }
         a{
             color:inherit!important;
             text-decoration:none;
+        }
+        .col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths,.col-xs-10ths, .col-sm-10ths, .col-md-10ths, .col-lg-10ths {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        @media ( min-width : 768px) {
+            .col-sm-5ths {
+                width: 20%;
+                float: left;
+            }
+            .col-sm-10ths {
+                width: 10%;
+                float: left;
+            }
+        }
+
+        @media ( min-width : 992px) {
+            .col-md-5ths {
+                width: 20%;
+                float: left;
+            }
+            .col-md-10ths {
+                width: 10%;
+                float: left;
+            }
+        }
+
+        @media ( min-width : 1200px) {
+            .col-lg-5ths {
+                width: 20%;
+                float: left;
+            }
+            .col-lg-10ths {
+                width: 10%;
+                float: left;
+            }
+        }
+        b, strong {
+            font-weight: 900;
         }
         .row{
             position:relative;
@@ -42,14 +82,19 @@
         .navbar{
             margin-bottom:0;
             border:none;
+            min-height:0;
         }
-
+        .header-dot{
+            color:#29b078;
+            font-weight:bold;
+            padding:0 0.05rem;
+        }
         .header-li{
             margin-right:0.5rem;
         }
         .header-a{
-            padding:0.5rem 0.5rem;
-            border-bottom:1px solid #29b078;
+            padding:0.4rem 0.15rem !important;
+            border-bottom:4px solid #29b078;
         }
         .font-green{
             color:#29b078;
@@ -58,7 +103,7 @@
             color:white;
         }
         .font-size-15px{
-            font-size:0.15rem;
+            font-size:0.16rem;
         }
         .font-size-18px{
             font-size:0.18rem;
@@ -69,9 +114,13 @@
         .background-white{
             background-color:white;
         }
-        .info-border{
+        .info-border-lg{
+             padding-top:0.33rem;
+             border-left: 1px dashed #999;
+         }
+        .info-border-xs{
             padding-top:0.33rem;
-            border-left: 1px dashed #999;
+            border-top: 1px dashed #999;
         }
         .nav-padding{
             padding:0 0.5rem;
@@ -109,7 +158,7 @@
             background:url(images/photo4.png) no-repeat -20px 0;
         }
         .student-text{
-            padding:0.15rem 0.5rem;
+            padding:0.1rem 0.4rem;
         }
         .student-header-padding{
             padding-bottom:0.4rem;
@@ -118,6 +167,7 @@
             width:2.2rem;
             height:1.7rem;
             background-color: white !important;
+            margin:0 auto;
         }
         .company1{
             background:url(images/alibaba.png) no-repeat -20px -10px;
@@ -137,29 +187,24 @@
         .border-left{
             border-left:2px solid white;
         }
-        .footer-padding-left{
-            padding:0 0.1rem;
-        }
-        .footer-padding-right{
-            padding:0 0.2rem;
-        }
         .footer-border{
             border-top:1px solid #32c086;
         }
         .carousel-control{
             background-image:none !important;
             text-shadow: none!important;
-            line-height:4.5rem;
-            font-size:0.6rem;
+            line-height: 31.5vw;
+            font-size: 8.5vw;
             color:white !important;
 
         }
         .carousel-inner p{
-            font-size:0.35rem;
-            position:absolute;
             color:white;
-            top:1.5rem;
-            left:2rem;
+            position:absolute;
+            top:5.5vw;
+            left:11.5vw;
+            font-size:3vw;
+            text-align:right;
         }
         .font-size-45px{
             font-size:0.45rem;
@@ -167,11 +212,23 @@
         .font-size-60px{
             font-size:0.6rem;
         }
+        .xs-header{
+            height:0.4rem;
+            line-height:0.4rem;
+        }
+        .carousel-indicators {
+            position: absolute;
+            top: 25vw;
+            left: 51vw;
+        }
+        .col-lg-5ths a:hover div{
+            box-shadow:0 0 10px gray;
+        }
     </style>
 </head>
 <body>
 <nav class="navbar navbar-defult">
-    <div class="container-fluid nav-padding background-white">
+    <div class=" hidden-xs container-fluid nav-padding background-white">
         <p class="navbar-text font-green">客服热线：010-594-78634</p>
             <a class="navbar-brand navbar-right" href="#">
                 <img alt="Brand" src="images/header-weibo.png">
@@ -182,15 +239,30 @@
             <a class="navbar-brand navbar-right" href="#">
                 <img alt="Brand" src="images/header-wechat.png">
             </a>
+    </div>
+    <div class="container-fluid visible-xs-block xs-header text-right"><a href="#">登录</a><span class="header-dot">|</span><a href="#">注册</a></div>
+    <div class=" container-fluid background-green font-size-15px">
+        <ul class="nav navbar-nav navbar-right font-white hidden-xs">
+            <li class="header-li"><a href="task8-1.html" class="header-a">首页</a></li>
+            <li class="header-li"><a href="task8-3.html" class="header-a">职业</a></li>
+            <li class="header-li"><a href="task8-2.html" class="header-a">推荐</a></li>
+            <li class="header-li"><a class="header-a">关于</a></li>
+        </ul>
+        <div class="navbar-header visible-xs-block">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="glyphicon glyphicon-menu-hamburger" style="color:darkgreen"></span>
+            </button>
         </div>
-        <div class="container-fluid background-green font-size-15px">
-            <ul class="nav navbar-nav navbar-right font-white">
-                <li class="header-li"><a class="header-a">首页</a></li>
-                <li class="header-li"><a class="header-a">职业</a></li>
-                <li class="header-li"><a class="header-a">推荐</a></li>
-                <li class="header-li"><a class="header-a">关于</a></li>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav font-white visible-xs-block">
+                <li class="text-center"><a href="#">首页</a></li>
+                <li class="text-center"><a href="#">职业</a></li>
+                <li class="text-center"><a href="#">推荐</a></li>
+                <li class="text-center"><a href="#">关于</a></li>
             </ul>
         </div>
+    </div>
+
 </nav>
 <div id="myCarousel" class="carousel slide">
     <!-- 轮播（Carousel）指标 -->
@@ -202,22 +274,22 @@
     <!-- 轮播（Carousel）项目 -->
     <div class="carousel-inner">
         <div class="item active">
-            <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;作为你一个初级菜鸟，你是否想要了解
-                <br><span class="font-size-45px"><span class="font-size-60px"> &emsp; &emsp;50万</span>年薪的程序员,都会哪些技能呢？</span>
+            <p>&emsp; &emsp; &emsp;作为你一个初级菜鸟，你是否想要了解<br>
+            <span style="font-size:4vw;"><span style="font-size:6.5vw;">50万</span>年薪的程序员,都会哪些技能呢？</span>
             </p>
             <img src="images/background.png" alt="First slide">
         </div>
         <div class="item">
-            <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;作为你一个中级菜鸟，你是否想要了解
-                <br><span class="font-size-45px"><span class="font-size-60px"> &emsp; &emsp;200万</span>年薪的程序员,都会哪些技能呢？</span>
+            <p>&emsp; &emsp; &emsp;作为你一个中级菜鸟，你是否想要了解<br>
+                <span style="font-size:4vw;"><span style="font-size:6.5vw;">200万</span>年薪的程序员,都会哪些技能呢？</span>
             </p>
             <img src="images/background.png" alt="Second slide">
         </div>
         <div class="item">
-            <p> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;作为你一个高级菜鸟，你是否想要了解
-                <br><span class="font-size-45px"> &emsp; &emsp;能找到<span class="font-size-60px">女朋友</span>的程序员,都会哪些技能呢？</span>
+            <p>&emsp; &emsp; &emsp;作为你一个高级菜鸟，你是否想要了解<br>
+                <span style="font-size:4vw;">找到<span style="font-size:6.5vw;">女朋友</span>的程序员,都会哪些技能呢？</span>
             </p>
-            <img src="images/background.png" alt="Second slide">
+            <img src="images/background.png" alt="Third slide">
         </div>
     </div>
     <!-- 轮播（Carousel）导航 -->
@@ -230,176 +302,182 @@
     <div class="row row-padding">
         <div class="col-lg-9">
             <div class="row">
-                <div class="col-lg-4"><p class="img-size"><img class="center-block" src="images/rocket.png"></p></div>
-                <div class="col-lg-4"><p class="img-size"><img class="center-block" src="images/book.png"></p></div>
-                <div class="col-lg-4"><p class="img-size"><img class="center-block" src="images/person.png"></p></div>
-                <div class="col-lg-4"><p class="text-center">高效</p></div>
-                <div class="col-lg-4"><p class="text-center">规范</p></div>
-                <div class="col-lg-4"><p class="text-center">人脉</p></div>
-                <div class="col-lg-4"><p class="text-center">将五到七年的成长时间，缩短到一年到三年。</p></div>
-                <div class="col-lg-4"><p class="text-center">标准的实战教程，不会走弯路</p></div>
-                <div class="col-lg-4"><p class="text-center">同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</p></div>
+                <div class="col-lg-4 col-sm-4"><p class="img-size"><img class="center-block" src="images/rocket.png"></p><p class="text-center">高效</p><p class="text-center">将五到七年的成长时间，缩短到一年到三年。</p></div>
+                <div class="col-lg-4 col-sm-4"><p class="img-size"><img class="center-block" src="images/book.png"></p><p class="text-center">规范</p><p class="text-center">标准的实战教程，不会走弯路</p></div>
+                <div class="col-lg-4 col-sm-4"><p class="img-size"><img class="center-block" src="images/person.png"></p><p class="text-center">人脉</p><p class="text-center">同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</p></div>
             </div>
         </div>
-        <div class="col-lg-2 col-lg-offset-1 info-border">
+        <div class="col-lg-2 col-lg-offset-1 info-border-lg visible-lg-block">
             <p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>累计在线学习人数</p>
             <p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>学员已经找到满意工作</p>
+        </div>
+        <div class="col-xs-12  hidden-lg hidden-md text-center info-border-xs">
+            <p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>累计在线学习人数</p>
+            <p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>学员已经找到满意工作</p>
+        </div>
+        <div class="col-md-12  visible-md-block text-center info-border-xs">
+            <div class="row">
+                <div class="col-md-6"><p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>累计在线学习人数</p></div>
+                <div class="col-md-6"><p class="font-green"><span class="glyphicon glyphicon-user"></span>12400</p><p>学员已经找到满意工作</p></div>
+            </div>
         </div>
     </div>
     <div class="row row-padding">
         <div class="col-lg-12 text-center font-size-18px"><strong>如何学习</strong></div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-            <div class="col-lg-3"><div class="square">1</div></div>
-            <div class="col-lg-7 " style="padding-top:0.07rem;">匹配你现在的个人情况寻找适合自己的岗位</div>
-                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
+            <div class="col-lg-3 col-xs-3"><div class="square">1</div></div>
+            <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">匹配你现在的个人情况寻找适合自己的岗位</div>
+                <div class="col-lg-2 col-xs-2 " style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">2</div></div>
-                <div class="col-lg-7" style="padding-top:0.07rem;">了解职业前景薪金待遇、竞争压力等</div>
-                <div class="col-lg-2 " style="line-height:0.5rem;"><img src="images/arrow.png"></div>
+                <div class="col-lg-3 col-xs-3"><div class="square">2</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">了解职业前景薪金待遇、竞争压力等</div>
+                <div class="col-lg-2 col-xs-2 hidden-sm" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">3</div></div>
-                <div class="col-lg-7" style="padding-top:0.16rem;">掌握行业内顶级技能</div>
-                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
+                <div class="col-lg-3 col-xs-3"><div class="square">3</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.16rem;">掌握行业内顶级技能</div>
+                <div class="col-lg-2 col-xs-2 hidden-md" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">4</div></div>
-                <div class="col-lg-6" style="padding-top:0.16rem;">查看职业目标任务</div>
+                <div class="col-lg-3 col-xs-3"><div class="square">4</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.16rem;">查看职业目标任务</div>
+                <div class="col-lg-2 col-xs-2 visible-md-block visible-xs-block" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">5</div></div>
-                <div class="col-lg-7" style="padding-top:0.07rem;">参考学习资源，掌握技能点，逐个完成任务</div>
-                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
+                <div class="col-lg-3 col-xs-3"><div class="square">5</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">参考学习资源，掌握技能点，逐个完成任务</div>
+                <div class="col-lg-2 col-xs-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">6</div></div>
-                <div class="col-lg-7" style="padding-top:0.07rem;">加入班级，和小伙伴们互帮互助，一块学习</div>
-                <div class="col-lg-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
+                <div class="col-lg-3 col-xs-3"><div class="square">6</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">加入班级，和小伙伴们互帮互助，一块学习</div>
+                <div class="col-lg-2 col-xs-2  hidden-sm hidden-md" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">7</div></div>
-                <div class="col-lg-7 " style="padding-top:0.07rem;">选择导师，一路引导，加速自己成长</div>
-                <div class="col-lg-2 " style="line-height:0.5rem;"><img src="images/arrow.png"></div>
+                <div class="col-lg-3 col-xs-3"><div class="square">7</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">选择导师，一路引导，加速自己成长</div>
+                <div class="col-lg-2 col-xs-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
-                <div class="col-lg-3"><div class="square">8</div></div>
-                <div class="col-lg-6 " style="padding-top:0.07rem;">完成职业技能，升级业界大牛</div>
+                <div class="col-lg-3 col-xs-3"><div class="square">8</div></div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">完成职业技能，升级业界大牛</div>
+                <div class="col-lg-2 col-xs-2 visible-xs-block" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
     </div>
     <div class="row row-padding">
         <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>优秀学员展示</strong></div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="student ">
                 <div class="square2 photo1"></div>
-                <p class="text-center student-text"><strong>技术顾问:汪汪佳</strong></p>
+                <p class="text-center student-text"><strong>技术顾问:罗大佑</strong></p>
                 <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="student ">
                 <div class="square2 photo2 "></div>
-                <p class="text-center student-text"><strong>技术顾问:狗佳</strong></p>
+                <p class="text-center student-text"><strong>技术顾问:罗小佑</strong></p>
                 <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3  col-md-3 col-sm-6">
             <div class="student ">
                 <div class="square2 photo3"></div>
-                <p class="text-center student-text"><strong>技术顾问:狗叼</strong></p>
+                <p class="text-center student-text"><strong>技术顾问:罗大佐</strong></p>
                 <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="student ">
                 <div class="square2 photo4"></div>
-                <p class="text-center student-text"><strong>技术顾问:智障儿子</strong></p>
+                <p class="text-center student-text"><strong>技术顾问:罗小佐</strong></p>
                 <P class="text-center student-text">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</P>
             </div>
         </div>
     </div>
         <div class="row row-padding">
             <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>战略合作企业</strong></div>
-            <div class="col-lg-2 col-lg-offset-1">
-                <div class="cooperate company1"></div>
+            <div class="col-lg-5ths col-sm-4">
+                <a href="#"><div class="cooperate company1"></div></a>
             </div>
-            <div class="col-lg-2">
-                <div class="cooperate company2"></div>
+            <div class="col-lg-5ths col-sm-4">
+                <a href="#"><div class="cooperate company2"></div></a>
             </div>
-            <div class="col-lg-2">
-                <div class="cooperate company3"></div>
+            <div class="col-lg-5ths col-sm-4">
+                <a href="#"><div class="cooperate company3"></div></a>
             </div>
-            <div class="col-lg-2">
-                <div class="cooperate company4"></div>
+            <div class="col-lg-5ths col-sm-4">
+                <a href="#"><div class="cooperate company4"></div></a>
             </div>
-            <div class="col-lg-2">
-                <div class="cooperate company5"></div>
+            <div class="col-lg-5ths col-sm-4">
+                <a href="#"><div class="cooperate company5"></div></a>
             </div>
         </div>
 </div>
 <nav class="navbar navber-defult">
     <div class="container-fluid background-white">
         <p class="text-center"><strong>友情链接</strong></p>
-        <div class="row">
-        <ul class="navbar-nav col-lg-12">
-            <li class="col-lg-1 col-lg-offset-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>教师招聘</a></li>
-            <li class="col-lg-1"><a>找工作</a></li>
-            <li class="col-lg-1"><a>教师招聘</a></li>
-            <li class="col-lg-1"><a>找工作</a></li>
-            <li class="col-lg-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>教师招聘</a></li>
-            <li class="col-lg-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>找工作</a></li>
-            <li class="col-lg-1 col-lg-offset-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>教师招聘</a></li>
-            <li class="col-lg-1"><a>找工作</a></li>
-            <li class="col-lg-1"><a>教师招聘</a></li>
-            <li class="col-lg-1"><a>找工作</a></li>
-            <li class="col-lg-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>教师招聘</a></li>
-            <li class="col-lg-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>手机软件</a></li>
-            <li class="col-lg-1"><a>找工作</a></li>
-        </ul>
+        <div class="navbar-nav row">
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>找工作</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>找工作</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4  col-sm-2"><a><b>·</b>找工作</a></div>
+            <div class="col-lg-10ths col-xs-4  col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>找工作</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>找工作</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
+            <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>找工作</a></div>
         </div>
+    </div>
+    <div class="container-fluid">
         <div class="row row-padding background-green font-white">
-            <div class="col-lg-3">
-                <p class="footer-padding-left">技能树 — 改变你我 </p><br>
-                <p><span class="footer-padding-left">关于我们</span>
-                    <span class="footer-padding-left border-left">联系我们</span>
-                    <span class="footer-padding-left border-left">合作企业</span></p>
+            <div class="col-lg-5 col-md-5 col-xs-12 col-sm-5">
+                <p >技能树 — 改变你我 </p>
+                <p><span >关于我们</span>
+                    <span class="border-left">联系我们</span>
+                    <span class="border-left">合作企业</span></p>
             </div>
-            <div class="col-lg-3 col-lg-offset-1 ">
-                <p class="footer-padding-right">旗下网站</p>
+            <div class="col-lg-5 col-md-5 col-xs-12 col-sm-5">
+                <p >旗下网站</p>
                 <p>
-                    <span class="footer-padding-right"><a>草船云孵化器</a></span>
-                    <span class="footer-padding-right"><a>最强IT特训营</a></span><br>
-                    <span class="footer-padding-right"><a>葡萄藤轻游戏</a></span>
-                    <span class="footer-padding-right"><a>桌游精灵</a></span></p>
+                    <span ><a href="#">草船云孵化器</a></span>
+                    <span class=""><a href="#">最强IT特训营</a></span><br>
+                    <span class=""><a href="#">葡萄藤轻游戏</a></span>
+                    <span class=""><a href="#">桌游精灵</a></span></p>
             </div>
-            <div class="col-lg-3 col-lg-offset-2">
+            <div class="col-lg-2  col-md-2 col-xs-12 col-sm-2">
                 <p>微信公众平台</p>
                 <p><img src="images/qrcode.png"></p>
             </div>
-            <div class="col-lg-12 text-center footer-border">Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP</div>
+            <div class="col-lg-12 col-xs-12 text-center footer-border">Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP</div>
         </div>
     </div>
 </nav>
