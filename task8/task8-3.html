@@ -7,6 +7,27 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>task8</title>
     <style>
+        @media  ( max-width : 767px) {
+            .media-box{
+                flex-wrap:wrap;
+            }
+            h5{
+                text-align:center;
+            }
+        }
+        @media ( min-width : 768px) {
+
+
+        }
+
+        @media ( min-width : 992px) {
+
+
+        }
+        @media ( min-width : 1200px) {
+
+
+        }
         *{
             padding:0;
             margin:0;
@@ -30,6 +51,10 @@
             font-size:16px;
             font-weight:bold;
             margin:0.1rem 0;
+        }
+        .table-responsive{
+            margin-bottom: 0!important;
+            border:none !important;
         }
         .table{
             margin-bottom:0;
@@ -128,12 +153,6 @@
         .border-left{
             border-left:2px solid white;
         }
-        .footer-padding-left{
-            padding:0 0.1rem;
-        }
-        .footer-padding-right{
-            padding:0 0.2rem;
-        }
         .footer-border{
             border-top:1px solid #32c086;
         }
@@ -150,9 +169,11 @@
         .nav-direction{
             padding :0.2rem 0;
             border-bottom:1px solid #edf1f2;
+            display:flex;
+            flex-wrap: wrap;
         }
         .nav-direction-text{
-            margin:0 0.15rem;
+            margin-left:0.15rem;
             padding:0.02rem;
         }
         .back{
@@ -174,7 +195,7 @@
             opacity:0.76;
         }
         .back-header{
-            padding:0.5rem;
+            padding:0.5rem 0;
             text-align:center;
         }
         .nav-direction-text-visited{
@@ -186,11 +207,34 @@
             top:0.25rem;
             left:0.5rem;
         }
+        .table-wrap{
+            white-space:normal !important;
+        }
+        .media-box{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+        }
+        .xs-header{
+            height:0.4rem;
+            line-height:0.4rem;
+        }
+        .header-dot{
+            color:#29b078;
+            font-weight:bold;
+            padding:0 0.05rem;
+        }
+        .logo-position2 {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.3rem;
+            width: 0.8rem;
+        }
     </style>
 </head>
 <body>
 <nav class="navbar navbar-defult">
-    <div class="container-fluid nav-padding background-white">
+    <div class=" hidden-xs container-fluid nav-padding background-white">
         <p class="navbar-text font-green">客服热线：010-594-78634</p>
         <a class="navbar-brand navbar-right" href="#">
             <img alt="Brand" src="images/header-weibo.png">
@@ -202,14 +246,29 @@
             <img alt="Brand" src="images/header-wechat.png">
         </a>
     </div>
-    <div class="container-fluid background-green font-size-15px">
-        <span class="logo-position"><img src="images/logo.png" alt="技能树logo"></span>
-        <ul class="nav navbar-nav navbar-right font-white">
+    <div class="container-fluid visible-xs-block xs-header text-right"><a href="#">登录</a><span class="header-dot">|</span><a href="#">注册</a></div>
+    <div class=" container-fluid background-green font-size-15px">
+        <span class="logo-position hidden-xs"><img src="images/logo.png" alt="技能树logo"></span>
+        <span class="logo-position2 visible-xs-inline"><img style="max-width:100%;" src="images/logo.png" alt="技能树logo"></span>
+        <ul class="nav navbar-nav navbar-right font-white hidden-xs">
             <li class="header-li"><a href="task8-1.html" class="header-a">首页</a></li>
             <li class="header-li"><a href="task8-3.html" class="header-a">职业</a></li>
             <li class="header-li"><a href="task8-2.html" class="header-a">推荐</a></li>
             <li class="header-li"><a class="header-a">关于</a></li>
         </ul>
+        <div class="navbar-header visible-xs-block">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="glyphicon glyphicon-menu-hamburger" style="color:darkgreen"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav font-white visible-xs-block">
+                <li class="text-center"><a href="#">首页</a></li>
+                <li class="text-center"><a href="#">职业</a></li>
+                <li class="text-center"><a href="#">推荐</a></li>
+                <li class="text-center"><a href="#">关于</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <div class="main">
@@ -230,18 +289,14 @@
         <h4>前端开发方向</h4>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                                <div class="media-box">
+                                    <div><img src="images/head.png"></div>
+                                    <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                        Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -273,7 +328,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -292,18 +347,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -335,12 +386,12 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
                         <!--背面-->
-                        <!--<div class="back">
+                        <div class="back">
                             <div class="back-header">
                                 iOS工程师
                             </div>
@@ -351,21 +402,17 @@
                                 国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。
                                 有限的iOS开发人才成了国内企业必争的资源。
                             </div>
-                        </div>-->
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -397,7 +444,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -423,18 +470,14 @@
         <h4>后端开发方向</h4>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -466,7 +509,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -485,18 +528,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -528,7 +567,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -547,18 +586,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -590,7 +625,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -609,18 +644,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -652,7 +683,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -671,18 +702,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -714,7 +741,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -740,18 +767,14 @@
         <h4>运维方向</h4>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -783,7 +806,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -802,18 +825,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -845,7 +864,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -864,18 +883,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -907,7 +922,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -933,18 +948,14 @@
         <h4>运维方向</h4>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-sm-6 col-md-4 ">
                     <div class="panel">
                         <!--正面-->
                         <div class="panel-heading">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <img class="media-object" src="images/head.png" alt="装作啥也没有的样子">
-                                </div>
-                                <div class="media-body">
-                                    <h5>前端工程师</h5>
-                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。
-                                </div>
+                            <div class="media-box">
+                                <div><img src="images/head.png"></div>
+                                <div style="padding-left:0.1rem;"><h5>前端工程师</h5>
+                                    Web前端开发工程师，主要职责是利用 (X) HTML / CSS / Java Script / flash等各种Web技术进行产品的开发。</div>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -976,7 +987,7 @@
                                 </table>
                                 <table class="table">
                                     <tr><td><strong class="font-size-14px">有<span class="font-red">286</span>人正在学</strong></td></tr>
-                                    <tr><td class="font-gray">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
+                                    <tr><td class="font-gray table-wrap">提示:在你学习之前你应该已经掌握XXX、XXXXX、XX等语言基础</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -1000,27 +1011,27 @@
     </div>
 </div>
 <nav class="navbar navber-defult">
-    <div class="container-fluid background-white">
+    <div class="container-fluid">
         <div class="row row-padding background-green font-white">
-            <div class="col-lg-4">
-                <p class="footer-padding-left">技能树 — 改变你我 </p><br>
-                <p><span class="footer-padding-left">关于我们</span>
-                    <span class="footer-padding-left border-left">联系我们</span>
-                    <span class="footer-padding-left border-left">合作企业</span></p>
+            <div class="col-lg-5 col-md-5 col-xs-12 col-sm-5">
+                <p >技能树 — 改变你我 </p><br>
+                <p><span >关于我们</span>
+                    <span class="border-left">联系我们</span>
+                    <span class="border-left">合作企业</span></p>
             </div>
-            <div class="col-lg-4 ">
-                <p class="footer-padding-right">旗下网站</p>
+            <div class="col-lg-5 col-md-5 col-xs-12 col-sm-5">
+                <p >旗下网站</p>
                 <p>
-                    <span class="footer-padding-right"><a href="#">草船云孵化器</a></span>
-                    <span class="footer-padding-right"><a href="#">最强IT特训营</a></span><br>
-                    <span class="footer-padding-right"><a href="#">葡萄藤轻游戏</a></span>
-                    <span class="footer-padding-right"><a href="#">桌游精灵</a></span></p>
+                    <span ><a href="#">草船云孵化器</a></span>
+                    <span class=""><a href="#">最强IT特训营</a></span><br>
+                    <span class=""><a href="#">葡萄藤轻游戏</a></span>
+                    <span class=""><a href="#">桌游精灵</a></span></p>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-2  col-md-2 col-xs-12 col-sm-2">
                 <p>微信公众平台</p>
                 <p><img src="images/qrcode.png"></p>
             </div>
-            <div class="col-lg-12 text-center footer-border">Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP</div>
+            <div class="col-lg-12 col-xs-12 text-center footer-border">Copyright © 2015技能树 www.jnshu.com  All Rights Reserved | 京ICP</div>
         </div>
     </div>
 </nav>

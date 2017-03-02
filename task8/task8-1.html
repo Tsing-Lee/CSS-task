@@ -12,21 +12,18 @@
         }
         body{
             background-color:#fafafa;
-            font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
         }
         .nav a:hover{
             background-color:transparent !important;
             border-bottom:4px solid white;
         }
         a{
-            color:inherit!important;
+            color:inherit !important;
             text-decoration:none;
         }
         .col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths,.col-xs-10ths, .col-sm-10ths, .col-md-10ths, .col-lg-10ths {
             position: relative;
             min-height: 1px;
-            padding-right: 15px;
-            padding-left: 15px;
         }
 
         @media ( min-width : 768px) {
@@ -73,7 +70,7 @@
         .student{
             padding-top:0.2rem;
             background-color:white;
-            box-shadow:0 0.02rem 5px grey;
+            box-shadow:0 0.02rem 5px #edecec;
             border-radius:5px;
         }
         .row-main-padding{
@@ -135,7 +132,7 @@
             border-radius:0.25rem;
             line-height:0.5rem;
             text-align:center;
-            box-shadow:0 0.02rem 5px gray;
+            box-shadow:0 0.02rem 5px #edecec;
             color: #29b078;
             background-color:white;
         }
@@ -166,23 +163,16 @@
         .cooperate{
             width:2.2rem;
             height:1.7rem;
-            background-color: white !important;
-            margin:0 auto;
+            background: white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
         }
-        .company1{
-            background:url(images/alibaba.png) no-repeat -20px -10px;
-        }
-        .company2{
-            background:url(images/ksyun.png) no-repeat -5px 10px;
-        }
-        .company3{
-            background:url(images/rl.png) no-repeat -10px -15px;
-        }
-        .company4{
-            background:url(images/ytx.png) no-repeat 50% 40px;
-        }
-        .company5{
-            background:url(images/qiniu.png) no-repeat 50% 40px;
+        .img-box{
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            padding-bottom:0.5rem;
         }
         .border-left{
             border-left:2px solid white;
@@ -206,12 +196,6 @@
             font-size:3vw;
             text-align:right;
         }
-        .font-size-45px{
-            font-size:0.45rem;
-        }
-        .font-size-60px{
-            font-size:0.6rem;
-        }
         .xs-header{
             height:0.4rem;
             line-height:0.4rem;
@@ -221,9 +205,22 @@
             top: 25vw;
             left: 51vw;
         }
-        .col-lg-5ths a:hover div{
-            box-shadow:0 0 10px gray;
+        a:hover .cooperate{
+            box-shadow:0 0 10px 5px #edecec;
+            position:relative;
         }
+        @media all and (min-width:1200px){
+            .body-width{
+                width:90%;
+            }
+        }
+        .background-white>p{
+            padding:0.15rem 0;
+        }
+        .padding-bottom{
+            padding-bottom:0.2rem;
+        }
+
     </style>
 </head>
 <body>
@@ -298,7 +295,7 @@
     <a class="carousel-control right" href="#myCarousel"
        data-slide="next">&rsaquo;</a>
 </div>
-<div class="container-fluid">
+<div class="container-fluid body-width">
     <div class="row row-padding">
         <div class="col-lg-9">
             <div class="row">
@@ -327,56 +324,57 @@
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
             <div class="col-lg-3 col-xs-3"><div class="square">1</div></div>
-            <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">匹配你现在的个人情况寻找适合自己的岗位</div>
+            <div class="col-lg-7 col-xs-7">匹配你现在的个人情况寻找适合自己的岗位</div>
                 <div class="col-lg-2 col-xs-2 " style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">2</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">了解职业前景薪金待遇、竞争压力等</div>
+                <div class="col-lg-7 col-xs-7">了解职业前景薪金待遇、竞争压力等</div>
                 <div class="col-lg-2 col-xs-2 hidden-sm" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">3</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.16rem;">掌握行业内顶级技能</div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.14rem;">掌握行业内顶级技能</div>
                 <div class="col-lg-2 col-xs-2 hidden-md" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">4</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.16rem;">查看职业目标任务</div>
+                <div class="col-lg-7 col-xs-7" style="padding-top:0.14rem;">查看职业目标任务</div>
                 <div class="col-lg-2 col-xs-2 visible-md-block visible-xs-block" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
+        <div class="clearfix visible-lg-block"></div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">5</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">参考学习资源，掌握技能点，逐个完成任务</div>
+                <div class="col-lg-7 col-xs-7">参考学习资源，掌握技能点，逐个完成任务</div>
                 <div class="col-lg-2 col-xs-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">6</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">加入班级，和小伙伴们互帮互助，一块学习</div>
+                <div class="col-lg-7 col-xs-7">加入班级，和小伙伴们互帮互助，一块学习</div>
                 <div class="col-lg-2 col-xs-2  hidden-sm hidden-md" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">7</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">选择导师，一路引导，加速自己成长</div>
+                <div class="col-lg-7 col-xs-7">选择导师，一路引导，加速自己成长</div>
                 <div class="col-lg-2 col-xs-2" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-6 col-md-4">
             <div class="row row-main-padding">
                 <div class="col-lg-3 col-xs-3"><div class="square">8</div></div>
-                <div class="col-lg-7 col-xs-7" style="padding-top:0.07rem;">完成职业技能，升级业界大牛</div>
+                <div class="col-lg-7 col-xs-7" >完成职业技能，升级业界大牛</div>
                 <div class="col-lg-2 col-xs-2 visible-xs-block" style="line-height:0.5rem;"><img src="images/arrow.png"></div>
             </div>
         </div>
@@ -412,29 +410,20 @@
             </div>
         </div>
     </div>
-        <div class="row row-padding">
-            <div class="col-lg-12 text-center font-size-18px student-header-padding"><strong>战略合作企业</strong></div>
-            <div class="col-lg-5ths col-sm-4">
-                <a href="#"><div class="cooperate company1"></div></a>
-            </div>
-            <div class="col-lg-5ths col-sm-4">
-                <a href="#"><div class="cooperate company2"></div></a>
-            </div>
-            <div class="col-lg-5ths col-sm-4">
-                <a href="#"><div class="cooperate company3"></div></a>
-            </div>
-            <div class="col-lg-5ths col-sm-4">
-                <a href="#"><div class="cooperate company4"></div></a>
-            </div>
-            <div class="col-lg-5ths col-sm-4">
-                <a href="#"><div class="cooperate company5"></div></a>
-            </div>
-        </div>
+    <p class=" text-center font-size-18px student-header-padding"><strong>战略合作企业</strong></p>
+    <div class="row img-box">
+        <a href="#"><div class="cooperate"><img src="images/al.png"></div></a>
+        <a href="#" ><div class="cooperate"><img src="images/jsy.png"></div></a>
+        <a href="#" ><div class="cooperate"><img src="images/hx.png"></div></a>
+        <a href="#" ><div class="cooperate"><img src="images/rl.png"></div></a>
+        <a href="#"><div class="cooperate"><img src="images/qn.png"></div></a>
+    </div>
 </div>
+
 <nav class="navbar navber-defult">
     <div class="container-fluid background-white">
-        <p class="text-center"><strong>友情链接</strong></p>
-        <div class="navbar-nav row">
+        <p class="text-center font-size-18px"><strong>友情链接</strong></p>
+        <div class="navbar-nav row padding-bottom">
             <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>手机软件</a></div>
             <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>教师招聘</a></div>
             <div class="col-lg-10ths col-xs-4 col-sm-2"><a><b>·</b>找工作</a></div>
@@ -460,7 +449,7 @@
     <div class="container-fluid">
         <div class="row row-padding background-green font-white">
             <div class="col-lg-5 col-md-5 col-xs-12 col-sm-5">
-                <p >技能树 — 改变你我 </p>
+                <p >技能树 — 改变你我 </p><br>
                 <p><span >关于我们</span>
                     <span class="border-left">联系我们</span>
                     <span class="border-left">合作企业</span></p>
